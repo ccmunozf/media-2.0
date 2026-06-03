@@ -5,6 +5,28 @@
             "header header header header"
             "principal principal principal principal"
             "footer footer footer footer";
+        grid-template-columns: auto auto auto auto;
+            
+
+    }
+
+    .principal{
+        display: grid;
+        img:nth-child( n + 2){
+            display: none;
+
+        }
+
+
+
+    }
+
+    .barra{
+        p:nth-child( n + 0 ){
+            display: none;
+
+        }
+
 
     }
 }
@@ -16,52 +38,82 @@
             "barra principal principal principal"
             "barra principal principal principal"
             "footer principal principal principal";
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
     }
 
-    img{
-        display: none;
+    .barra{
+        background-color: rgb(147, 147, 147);
+        display: grid;
+        flex-direction: column;
+        gap: 1%;
+
+        
 
     }
-    
 
+    .principal{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+
+
+    }
+
+    .principal img{
+        background-color: white;
+        border: solid 1px black;
+        gap: 1%;
+        padding: 1%;
+        margin: 1%;
+    }
 }
 
 
 
 .footer {
     grid-area: footer;
-    background-color: bisque;
+    background-color: #00215f ;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-align: end;
 
 }
 
 .header {
     grid-area: header;
-    background-color: aqua;
+    background-color:rgb(122, 121, 121);
+    color: white;
 }
 
-.principal {
-    grid-area: principal;
-    background-color: brown;
+.barras{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: end;
 
 }
+
+
 
 .barra {
+    display: flex;
+    gap: 3%;
     grid-area: barra;
-    background-color: blueviolet;
-
+    background-color: #00215f;
+    color: white;
+    align-items: baseline;
 }
 
 
 
 .principal img {
-    width: 500px;
+    width: 400px;
 
 }
 
 .principal {
-    display: flex;
-    align-items: center;
-
+    display: grid;
+    grid-template-rows: auto auto auto;
+    
 
 }
